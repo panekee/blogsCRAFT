@@ -1,5 +1,64 @@
+/* Estilo base oscuro */
 body {
   margin: 0;
   padding: 0;
-  background-color: #ffffff;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #111;
+  color: #eee;
+}
+
+/* Fondo difuminado y oscuro cuando aparece el popup */
+.difuminado {
+  filter: blur(4px) brightness(0.4);
+}
+
+/* Overlay del popup */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 10, 10, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* Contenedor del popup */
+.popup {
+  background-color: #1e1e1e;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Botones */
+.botones button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  margin: 10px;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.botones button:hover {
+  background-color: #555;
+}
+
+/* Botón cerrar */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 28px;
+  color: #aaa;
+  cursor: pointer;
 }
