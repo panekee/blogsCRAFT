@@ -1,14 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('btn-chill').addEventListener('click', () => elegirJugador('chill'));
-  document.getElementById('btn-tryhard').addEventListener('click', () => elegirJugador('tryhard'));
-  document.getElementById('btn-creativo').addEventListener('click', () => elegirJugador('creativo'));
+  const botones = document.querySelectorAll('.popup-btn');
+  const popup = document.getElementById('popup-jugador');
+
+  botones.forEach(boton => {
+    boton.addEventListener('click', () => {
+      const tipo = boton.getAttribute('data-tipo');
+      console.log("Jugador elegido:", tipo);
+      popup.style.display = 'none';
+    });
+  });
 });
-
-function elegirJugador(tipo) {
-  console.log("Jugador elegido:", tipo);
-  document.getElementById('popup-jugador').style.display = 'none';
-}
-
-function cerrarPopup() {
-  document.getElementById('popup-jugador').style.display = 'none';
-}
