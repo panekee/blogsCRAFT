@@ -1,95 +1,31 @@
-/* Estilo base oscuro */
+/* === ESTILOS GENERALES === */
 body {
   margin: 0;
-  padding: 0;
-  font-family: "Segoe UI", sans-serif;
-  background-color: #111;
-  color: #eee;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  color: white;
 }
 
-/* Fondo difuminado y oscuro cuando aparece el popup */
-.difuminado {
-  filter: blur(4px) brightness(0.4);
-}
-
-/* Overlay del popup */
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(10, 10, 10, 0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
-}
-
-/* Contenedor del popup */
-.popup {
-  background-color: #1e1e1e;
-  padding: 30px;
-  border-radius: 15px;
+h1, h2 {
   text-align: center;
-  width: 90%;
-  max-width: 400px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
-/* Botones */
-.botones button {
-  background-color: #333;
-  color: #fff;
+button {
+  background-color: #292929;
+  color: white;
   border: none;
-  margin: 10px;
-  padding: 12px 20px;
+  padding: 12px 24px;
   border-radius: 12px;
   font-size: 16px;
   cursor: pointer;
-  transition: 0.3s;
-}
-.botones button:hover {
-  background-color: #555;
+  transition: background-color 0.3s ease;
 }
 
-/* Botón cerrar */
-.close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 28px;
-  color: #aaa;
-  cursor: pointer;
-}
-.articulo {
-  background-color: #1e1e1e;
-  border-radius: 16px;
-  padding: 24px;
-  margin: 40px auto;
-  max-width: 850px;
-  box-shadow: 0 0 16px rgba(0, 0, 0, 0.6);
-  color: #e0e0e0;
+button:hover {
+  background-color: #444;
 }
 
-.articulo h2 {
-  font-size: 24px;
-  color: #ffb347;
-  margin-bottom: 10px;
-}
-
-.articulo h3 {
-  margin-top: 24px;
-  font-size: 20px;
-  color: #87cefa;
-}
-
-.articulo .meta {
-  font-size: 13px;
-  color: #888;
-  margin-bottom: 20px;
-}
-/* --- ESTILOS PARA EL POPUP DE SELECCIÓN DE JUGADOR --- */
+/* === POPUP ESTILOS === */
 .popup-overlay {
   position: fixed;
   top: 0;
@@ -105,40 +41,4 @@ body {
 }
 
 .popup-contenido {
-  background-color: #1e1e1e;
-  padding: 30px;
-  border-radius: 20px;
-  text-align: center;
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
-  max-width: 400px;
-}
-
-.popup-contenido h2 {
-  color: #ffffff;
-  margin-bottom: 20px;
-}
-
-.popup-botones button {
-  background-color: #333;
-  color: #fff;
-  border: none;
-  margin: 10px;
-  padding: 12px 24px;
-  border-radius: 12px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.popup-botones button:hover {
-  background-color: #555;
-}
-
-.popup-cerrar {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  font-size: 24px;
-  color: #aaa;
-  cursor: pointer;
-}
+  ba
