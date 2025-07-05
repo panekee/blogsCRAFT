@@ -5,71 +5,88 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>blogsCRAFT</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background-color: #121212;
+      color: #e0e0e0;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    #playerTypeSelector {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(18, 18, 18, 0.95);
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .player-button {
+      background-color: #1f1f1f;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .player-button:hover {
+      background-color: #333;
+      transform: scale(1.05);
+    }
+
+    main {
+      max-width: 800px;
+      margin: 100px auto 40px;
+      padding: 20px;
+    }
+
+    article {
+      background-color: #1f1f1f;
+      padding: 24px;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+      margin-top: 30px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    article:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- === POPUP DE TIPO DE JUGADOR === -->
-  <div id="popup-jugador" class="popup-overlay">
-    <div class="popup-contenido">
-      <h2>¿Qué tipo de jugador eres?</h2>
-      <div class="popup-botones">
-        <button class="popup-btn" data-tipo="chill">chill</button>
-        <button class="popup-btn" data-tipo="tryhard">tryhard</button>
-        <button class="popup-btn" data-tipo="creativo">creativo</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- === CONTENIDO PRINCIPAL === -->
-  <main>
-    <h1>Últimos artículos de blogsCRAFT</h1>
-
-    <!-- Artículo 1 -->
-    <article>
-      <h2>El Gólem de Cobre llega a Minecraft: Organización y estilo en tus cofres</h2>
-      <p><strong>La actualización de julio de 2025</strong> ha traído consigo uno de los añadidos más esperados por la comunidad de Minecraft: el Gólem de Cobre...</p>
-
-      <h3>Un poco de historia</h3>
-      <p>El Gólem de Cobre fue una de las tres criaturas propuestas durante el Mob Vote de 2021...</p>
-
-      <h3>¿Qué hace el Gólem de Cobre?</h3>
-      <p>Su habilidad principal es organizar cofres hechos de cobre...</p>
-
-      <h3>Otros añadidos relacionados</h3>
-      <p>Junto con el gólem llegaron las herramientas y armaduras de cobre...</p>
-
-      <h3>Impacto en el gameplay</h3>
-      <p>Para los jugadores técnicos y constructores, esta actualización abre la puerta a nuevas posibilidades...</p>
-
-      <h3>Conclusión</h3>
-      <p>El Gólem de Cobre representa más que una nueva criatura...</p>
-    </article>
-
-    <!-- Artículo 2 -->
-    <article>
-      <h2>Lava Chicken: el nuevo disco musical de Minecraft que todos quieren conseguir</h2>
-      <p><strong>Minecraft</strong> siempre ha destacado por su ambientación sonora, desde los suaves temas de C418 hasta los nuevos discos ocultos...</p>
-
-      <h3>¿Qué es Lava Chicken?</h3>
-      <p>Se trata de un disco musical coleccionable con una pista exclusiva que mezcla sonidos tribales, risas distorsionadas y efectos de lava burbujeante...</p>
-
-      <h3>¿Dónde se consigue?</h3>
-      <p>Actualmente, el disco no aparece en cofres comunes ni se puede craftear...</p>
-
-      <h3>¿Qué efectos tiene?</h3>
-      <p>Además de su música única, al colocarlo en un tocadiscos provoca que gallinas cercanas se acerquen y comiencen a saltar...</p>
-
-      <h3>Impacto en la comunidad</h3>
-      <p>En apenas semanas, el disco se ha vuelto tendencia en YouTube, TikTok y Reddit...</p>
-
-      <h3>¿Es un meme o un homenaje?</h3>
-      <p>Ambas cosas. Mojang ha demostrado una vez más que puede tomarse a sí mismo con humor...</p>
-
-      <h3>Conclusión</h3>
-      <p>Pequeños detalles como este disco mantienen viva la magia de Minecraft...</p>
-    </article>
-  </main>
-
-  <script src="script.js"></script>
-</body>
-</html>
+  <div id="playerTypeSelector">
+    <h2>¿Qué tipo de jugador eres?</h2>
+    <button class="player-button" onclick="hideSelector()">Chill</button>
+    <button class="player-button" onclick="hideSelector()">Tryhard</button>
+    <button class="player-but
+>
