@@ -1,12 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>blogsCRAFT</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- Página temporalmente vacía -->
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>blogsCRAFT</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="overlay" id="overlay">
+    <div class="popup">
+      <span class="close" onclick="cerrarPopup()">×</span>
+      <h2>¿Qué tipo de jugador eres?</h2>
+      <div class="botones">
+        <button>Chill</button>
+        <button>Tryhard</button>
+        <button>Creativo</button>
+      </div>
+    </div>
+  </div>
+
+  <main id="contenido" class="difuminado">
+    <!-- Aquí aparecerán artículos u otros elementos -->
+  </main>
+
+  <script src="script.js"></script>
+</body>
 </html>
