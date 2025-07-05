@@ -2,79 +2,65 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>blogsCRAFT</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div class="overlay" id="overlay">
-    <div class="popup">
-      <span class="close" onclick="cerrarPopup()">×</span>
-      <h2>¿Qué tipo de jugador eres?</h2>
-      <div class="botones">
-        <button>Chill</button>
-        <button>Tryhard</button>
-        <button>Creativo</button>
-      </div>
-    </div>
-  </div>
+  <style>
+    /* === ESTILOS GENERALES === */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
+      color: white;
+    }
 
-<article class="articulo">
-  <h2>🛠️ El Gólem de Cobre llega a Minecraft: Organización y estilo en tus cofres</h2>
-  <p class="meta">Publicado por Panekeee — 5 de julio de 2025</p>
+    h1, h2 {
+      text-align: center;
+    }
 
-  <p>La actualización de julio de 2025 ha traído consigo uno de los añadidos más esperados por la comunidad de Minecraft: el Gólem de Cobre. Esta criatura, originalmente propuesta en una votación comunitaria, finalmente ha sido integrada en la versión Java 1.21.7, y ya se encuentra en fase de pruebas para su llegada a Bedrock en otoño. Pero, ¿por qué tanto revuelo? ¿Qué lo hace tan especial? En este artículo te lo contamos todo con lujo de detalle.</p>
+    button {
+      background-color: #292929;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 12px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
 
-  <h3>📜 Un poco de historia</h3>
-  <p>El Gólem de Cobre fue una de las tres criaturas propuestas durante el Mob Vote de 2021, junto con el Allay y el Glare. Aunque no ganó en aquel momento, Mojang no lo olvidó. Su diseño se mantuvo vivo en la comunidad de modders, y su función prometía ser útil: interactuar con botones de cobre para automatizar ciertos procesos. Con su llegada oficial, Mojang lo ha reinventado.</p>
+    button:hover {
+      background-color: #444;
+    }
 
-  <h3>⚙️ ¿Qué hace el Gólem de Cobre?</h3>
-  <p>Su habilidad principal es organizar cofres hechos de cobre. Estos cofres, nuevos en esta actualización, permiten una organización visual por colores y niveles de oxidación. El Gólem detecta cofres cercanos y automáticamente distribuye ítems similares. Esto cambia por completo la experiencia de almacenamiento y gestión de inventario en bases medianas y grandes.</p>
+    /* === POPUP ESTILOS === */
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(6px) brightness(0.6);
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-  <p>Además, como el cobre se oxida, los jugadores pueden "congelar" su estado con cera de abeja. Esto significa que un cofre puede servir como marcador visual por tiempo (más oxidado = más viejo) o como categoría específica.</p>
+    .popup-contenido {
+      background-color: #1e1e1e;
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+      max-width: 400px;
+      position: relative;
+    }
 
-  <h3>🧪 Otros añadidos relacionados</h3>
-  <p>Junto con el gólem llegaron las herramientas y armaduras de cobre. Se sitúan entre la piedra y el hierro en cuanto a resistencia y durabilidad. Sin embargo, también se oxidan, afectando sus estadísticas. Mojang ha introducido encantamientos como "Antioxidante" y "Refuerzo Metálico" para contrarrestar estos efectos.</p>
+    .popup-contenido h2 {
+      margin-bottom: 20px;
+    }
 
-  <h3>🎮 Impacto en el gameplay</h3>
-  <p>Para los jugadores técnicos y constructores, esta actualización abre la puerta a nuevas posibilidades. Granjas automatizadas, almacenes estéticos, o simplemente una forma más divertida de tener ayudantes que aporten vida a nuestras construcciones.</p>
-
-  <h3>✅ Conclusión</h3>
-  <p>El Gólem de Cobre representa más que una nueva criatura: es un símbolo del compromiso de Mojang con su comunidad. Tomaron una idea descartada, la mejoraron y la integraron de forma coherente y útil. Sin duda, esta es una de las mejores adiciones del año.</p>
-</article>
-  
-
-  <script src="script.js"></script>
-<!-- Popup -->
-<div id="popup-jugador" class="popup-overlay">
-  <div class="popup-contenido">
-    <span class="popup-cerrar" onclick="cerrarPopup()">×</span>
-    <h2>¿Qué tipo de jugador eres?</h2>
-    <div class="popup-botones">
-      <button id="btn-chill">chill</button>
-      <button id="btn-tryhard">tryhard</button>
-      <button id="btn-creativo">creativo</button>
-    </div>
-  </div>
-</div>
-
-<!-- JavaScript funcional -->
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('btn-chill').addEventListener('click', () => elegirJugador('chill'));
-    document.getElementById('btn-tryhard').addEventListener('click', () => elegirJugador('tryhard'));
-    document.getElementById('btn-creativo').addEventListener('click', () => elegirJugador('creativo'));
-  });
-
-  function elegirJugador(tipo) {
-    console.log("Jugador elegido:", tipo);
-    document.getElementById('popup-jugador').style.display = 'none';
-  }
-
-  function cerrarPopup() {
-    document.getElementById('popup-jugador').style.display = 'none';
-  }
-</script>
-
-</body>
-</html>
+    .popup-botones {
+      display: flex;
+      justify-content: center;
