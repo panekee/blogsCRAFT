@@ -1,2 +1,4 @@
-// Aquí puedes poner lógica en el futuro
-console.log("Paneke dominando el mundo digital...");
+function cerrarPopup() {
+  document.getElementById("overlay").style.display = "none";
+  document.getElementById("contenido").classList.remove("difuminado");
+}
