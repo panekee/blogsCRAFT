@@ -45,5 +45,35 @@
   
 
   <script src="script.js"></script>
+  <!-- ...tu contenido normal... -->
+
+<!-- Popup del jugador -->
+<div id="popup-jugador" class="popup-overlay">
+  <div class="popup-contenido">
+    <span class="popup-cerrar" onclick="cerrarPopup()">×</span>
+    <h2>¿Qué tipo de jugador eres?</h2>
+    <div class="popup-botones">
+      <button onclick="elegirJugador('chill')">chill</button>
+      <button onclick="elegirJugador('tryhard')">tryhard</button>
+      <button onclick="elegirJugador('creativo')">creativo</button>
+    </div>
+  </div>
+</div>
+
+<!-- Script que cierra el popup -->
+<script>
+  function elegirJugador(tipo) {
+    console.log("Jugador seleccionado:", tipo);
+    document.getElementById('popup-jugador').style.display = 'none';
+  }
+
+  function cerrarPopup() {
+    document.getElementById('popup-jugador').style.display = 'none';
+  }
+</script>
+
+</body>
+</html>
+
 </body>
 </html>
