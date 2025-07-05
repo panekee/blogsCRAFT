@@ -62,3 +62,30 @@ body {
   color: #aaa;
   cursor: pointer;
 }
+.articulo {
+  background-color: #1e1e1e;
+  border-radius: 16px;
+  padding: 24px;
+  margin: 40px auto;
+  max-width: 850px;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.6);
+  color: #e0e0e0;
+}
+
+.articulo h2 {
+  font-size: 24px;
+  color: #ffb347;
+  margin-bottom: 10px;
+}
+
+.articulo h3 {
+  margin-top: 24px;
+  font-size: 20px;
+  color: #87cefa;
+}
+
+.articulo .meta {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 20px;
+}
