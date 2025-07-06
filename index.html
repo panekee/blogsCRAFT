@@ -2,103 +2,96 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>blogsCRAFT</title>
   <style>
     body {
+      background-color: #0f0f0f;
+      color: white;
+      font-family: Arial, sans-serif;
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #121212;
-      color: #ffffff;
+      padding: 0;
+    }
+
+    header {
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+      font-size: 28px;
+      font-weight: bold;
     }
 
     nav {
       display: flex;
       justify-content: center;
-      gap: 80px;
-      background-color: #1f1f1f;
-      padding: 20px 0;
-      font-size: 1.2rem;
-      border-bottom: 2px solid #444;
+      gap: 50px;
+      padding: 15px 0;
+      background-color: #1a1a1a;
+      border-bottom: 2px solid white;
     }
 
     nav a {
-      color: #ffffff;
+      color: white;
       text-decoration: none;
-      transition: color 0.3s;
+      font-size: 18px;
+      font-weight: 500;
     }
 
     nav a:hover {
-      color: #00ff99;
+      color: orange;
     }
 
-    .articles {
+    .articulos {
       display: flex;
+      gap: 30px;
       justify-content: center;
-      gap: 40px;
-      padding: 50px 20px;
       flex-wrap: wrap;
+      padding: 40px;
     }
 
-    .article {
-      background-color: #1e1e1e;
-      width: 250px;
-      height: 250px;
+    .card {
+      background-color: #1a1a1a;
+      border-radius: 10px;
       padding: 20px;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      width: 400px;
       transition: transform 0.3s ease;
       cursor: pointer;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     }
 
-    .article:hover {
+    .card:hover {
       transform: scale(1.05);
     }
 
-    .article h2 {
-      font-size: 1.1rem;
-      color: #ffa94d;
-      margin-bottom: 10px;
+    .card h3 {
+      color: orange;
+      margin-top: 0;
     }
 
-    .article p {
-      color: #bbbbbb;
-      font-size: 0.9rem;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
+    .card p {
+      color: #c0c0c0;
     }
   </style>
 </head>
 <body>
-
-  <!-- ✅ ESTA SECCIÓN ES LA QUE DEBES TENER -->
   <nav>
-    <a href="#">inicio</a>
-    <a href="#">comunidad</a>
+    <a href="index.html">inicio</a>
+    <a href="comunidad.html">comunidad</a>
     <a href="#">descargas</a>
   </nav>
 
-  <div class="articles">
-    <a href="golem.html" target="_blank">
-      <div class="article">
-        <h2>El Gólem de Cobre llega a Minecraft</h2>
-        <p>La comunidad lo pidió, Mojang escuchó. Ahora organizar cofres es más fácil y con más estilo que nunca.</p>
-      </div>
-    </a>
+  <header>blogsCRAFT</header>
 
-    <a href="lava-chicken.html" target="_blank">
-      <div class="article">
-        <h2>Lava Chicken: el nuevo disco musical que todos quieren</h2>
-        <p>Descubre el misterio detrás del disco más extraño, caótico y divertido de la historia de Minecraft.</p>
-      </div>
-    </a>
+  <div class="articulos">
+    <div class="card" onclick="window.location.href='golem.html'">
+      <h3>El Gólem de Cobre llega a Minecraft</h3>
+      <p>La comunidad lo pidió, Mojang escuchó. Ahora organizar cofres es más fácil y con más estilo que nunca.</p>
+    </div>
+    <div class="card" onclick="window.location.href='lava-chicken.html'">
+      <h3>Lava Chicken: el nuevo disco musical que todos quieren</h3>
+      <p>Descubre el misterio detrás del disco más extraño, caótico y divertido de la historia de Minecraft.</p>
+    </div>
   </div>
-
 </body>
 </html>
+
