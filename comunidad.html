@@ -1,78 +1,122 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Comunidad</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>blogsCRAFT - Comunidad</title>
   <style>
     body {
-      background-color: white;
-      color: black;
-      font-family: Arial, sans-serif;
       margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
     }
 
-    nav {
+    header {
+      background-color: #1e1e1e;
+      padding: 1rem 2rem;
       display: flex;
-      justify-content: center;
-      gap: 50px;
-      padding: 15px 0;
-      background-color: white;
-      border-bottom: 3px solid black;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    nav a {
-      color: black;
-      text-decoration: none;
-      font-size: 22px;
+    .logo {
+      font-size: 1.5rem;
+      color: white;
       font-weight: bold;
     }
 
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: white;
+      transition: color 0.3s ease;
+    }
+
     nav a:hover {
-      color: orange;
+      color: #00cc66;
     }
 
-    h1 {
-      text-align: center;
-      font-size: 48px;
-      margin: 30px 0;
+    main {
+      padding: 2rem;
     }
 
-    .temas {
-      display: flex;
-      justify-content: center;
-      gap: 60px;
-      padding: 30px;
+    h2 {
+      color: #1e1e1e;
     }
 
-    .tema {
-      padding: 20px 40px;
-      border: 3px solid black;
-      border-radius: 20px;
-      font-size: 22px;
+    .chat-box {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .chat-room {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      padding: 1rem;
+      transition: transform 0.2s ease;
+    }
+
+    .chat-room:hover {
+      transform: scale(1.03);
+    }
+
+    .chat-room h3 {
+      margin-top: 0;
+    }
+
+    .btn-crear {
+      display: inline-block;
+      margin-top: 1rem;
+      background-color: #00cc66;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 8px;
       cursor: pointer;
-      transition: transform 0.3s ease;
+      transition: background-color 0.3s ease;
     }
 
-    .tema:hover {
-      transform: scale(1.1);
-      background-color: #f0f0f0;
+    .btn-crear:hover {
+      background-color: #00994d;
     }
+
   </style>
 </head>
 <body>
-  <nav>
-    <a href="index.html">inicio</a>
-    <a href="comunidad.html">comunidad</a>
-    <a href="#">descargas</a>
-  </nav>
+  <header>
+    <div class="logo">blogsCRAFT</div>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="comunidad.html">Comunidad</a>
+      <a href="#">Descargas</a>
+    </nav>
+  </header>
 
-  <h1>temas de la comunidad</h1>
+  <main>
+    <h2>Salas de charla</h2>
+    <div class="chat-box">
+      <div class="chat-room">
+        <h3>Survival</h3>
+        <p>Discute estrategias, comparte ideas para sobrevivir y muestra tu base.</p>
+      </div>
+      <div class="chat-room">
+        <h3>Redstone</h3>
+        <p>Comparte tus mecanismos más locos y aprende de otros ingenieros de Redstone.</p>
+      </div>
+      <div class="chat-room">
+        <h3>Creativo</h3>
+        <p>Comparte tus construcciones y participa en concursos de diseño.</p>
+      </div>
+      <div class="chat-room">
+        <h3>Mods y Plugins</h3>
+        <p>Habla sobre tus favoritos, cómo instalarlos y encuentra nuevos mods interesantes.</p>
+      </div>
+    </div>
 
-  <div class="temas">
-    <div class="tema">actualizaciones</div>
-    <div class="tema">PvP</div>
-    <div class="tema">servidores</div>
-  </div>
+    <button class="btn-crear">+ Crear nueva sala</button>
+  </main>
 </body>
 </html>
