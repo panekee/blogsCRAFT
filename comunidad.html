@@ -8,16 +8,17 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f5f5f5;
-      color: #333;
+      background-color: #1e1e1e;
+      color: #fff;
     }
 
     header {
-      background-color: #1e1e1e;
+      background-color: #121212;
       padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     }
 
     .logo {
@@ -30,11 +31,12 @@
       margin-left: 1.5rem;
       text-decoration: none;
       color: white;
-      transition: color 0.3s ease;
+      font-weight: 500;
+      transition: opacity 0.3s ease;
     }
 
     nav a:hover {
-      color: #00cc66;
+      opacity: 0.7;
     }
 
     main {
@@ -42,20 +44,21 @@
     }
 
     h2 {
-      color: #1e1e1e;
+      color: white;
+      margin-bottom: 1rem;
     }
 
     .chat-box {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: 1.5rem;
     }
 
     .chat-room {
-      background-color: white;
+      background-color: #2b2b2b;
       border-radius: 12px;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
       padding: 1rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
       transition: transform 0.2s ease;
     }
 
@@ -65,22 +68,27 @@
 
     .chat-room h3 {
       margin-top: 0;
+      color: #ffa726;
+    }
+
+    .chat-room p {
+      color: #ccc;
     }
 
     .btn-crear {
-      display: inline-block;
-      margin-top: 1rem;
-      background-color: #00cc66;
-      color: white;
-      padding: 0.5rem 1rem;
+      margin-top: 2rem;
+      padding: 0.6rem 1.2rem;
+      background-color: #ffa726;
       border: none;
       border-radius: 8px;
+      color: #1e1e1e;
+      font-weight: bold;
       cursor: pointer;
       transition: background-color 0.3s ease;
     }
 
     .btn-crear:hover {
-      background-color: #00994d;
+      background-color: #fb8c00;
     }
 
   </style>
@@ -99,20 +107,20 @@
     <h2>Salas de charla</h2>
     <div class="chat-box">
       <div class="chat-room">
-        <h3>Survival</h3>
-        <p>Discute estrategias, comparte ideas para sobrevivir y muestra tu base.</p>
+        <h3>Supervivencia</h3>
+        <p>Habla sobre cómo sobrevivir, estrategias de combate, comida y más.</p>
       </div>
       <div class="chat-room">
         <h3>Redstone</h3>
-        <p>Comparte tus mecanismos más locos y aprende de otros ingenieros de Redstone.</p>
+        <p>Comparte creaciones con mecanismos complejos y pide ayuda con circuitos.</p>
       </div>
       <div class="chat-room">
         <h3>Creativo</h3>
-        <p>Comparte tus construcciones y participa en concursos de diseño.</p>
+        <p>Comparte tus construcciones, texturas y participa en concursos creativos.</p>
       </div>
       <div class="chat-room">
-        <h3>Mods y Plugins</h3>
-        <p>Habla sobre tus favoritos, cómo instalarlos y encuentra nuevos mods interesantes.</p>
+        <h3>Mods</h3>
+        <p>Explora los mods favoritos de la comunidad y comparte tus propios packs.</p>
       </div>
     </div>
 
