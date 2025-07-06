@@ -12,28 +12,46 @@
       color: #ffffff;
     }
 
-    header {
-      padding: 20px;
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 80px;
       background-color: #1f1f1f;
-      text-align: center;
-      font-size: 2rem;
-      font-weight: bold;
+      padding: 20px 0;
+      font-size: 1.2rem;
+      border-bottom: 2px solid #444;
     }
 
-    .content {
-      padding: 40px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00ff99;
+    }
+
+    .articles {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 50px 20px;
+      flex-wrap: wrap;
     }
 
     .article {
       background-color: #1e1e1e;
+      width: 250px;
+      height: 250px;
       padding: 20px;
       border-radius: 16px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
       transition: transform 0.3s ease;
       cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .article:hover {
@@ -41,12 +59,14 @@
     }
 
     .article h2 {
-      margin-top: 0;
+      font-size: 1.1rem;
       color: #ffa94d;
+      margin-bottom: 10px;
     }
 
     .article p {
       color: #bbbbbb;
+      font-size: 0.9rem;
     }
 
     a {
@@ -54,18 +74,26 @@
       color: inherit;
     }
 
-    @media (max-width: 600px) {
-      .content {
-        padding: 20px;
+    @media (max-width: 768px) {
+      nav {
+        gap: 40px;
+      }
+
+      .article {
+        width: 90%;
       }
     }
   </style>
 </head>
 <body>
 
-  <header>blogsCRAFT</header>
+  <nav>
+    <a href="#">inicio</a>
+    <a href="#">comunidad</a>
+    <a href="#">descargas</a>
+  </nav>
 
-  <div class="content">
+  <div class="articles">
     <a href="golem.html" target="_blank">
       <div class="article">
         <h2>El Gólem de Cobre llega a Minecraft</h2>
@@ -83,4 +111,3 @@
 
 </body>
 </html>
-
