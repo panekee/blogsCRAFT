@@ -2,121 +2,95 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>blogsCRAFT - Comunidad</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>blogsCRAFT</title>
   <style>
     body {
+      background-color: #0f0f0f;
+      color: white;
+      font-family: Arial, sans-serif;
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f5f5f5;
-      color: #333;
+      padding: 0;
     }
 
     header {
-      background-color: #1e1e1e;
-      padding: 1rem 2rem;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 1.5rem;
-      color: white;
+      justify-content: center;
+      padding: 20px;
+      font-size: 28px;
       font-weight: bold;
     }
 
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      padding: 15px 0;
+      background-color: #1a1a1a;
+      border-bottom: 2px solid white;
+    }
+
     nav a {
-      margin-left: 1.5rem;
-      text-decoration: none;
       color: white;
-      transition: color 0.3s ease;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 500;
     }
 
     nav a:hover {
-      color: orange !important;
+      color: orange;
     }
 
-    main {
-      padding: 2rem;
+    .articulos {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 40px;
     }
 
-    h2 {
-      color: #1e1e1e;
+    .card {
+      background-color: #1a1a1a;
+      border-radius: 10px;
+      padding: 20px;
+      width: 400px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     }
 
-    .chat-box {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 1.5rem;
+    .card:hover {
+      transform: scale(1.05);
     }
 
-    .chat-room {
-      background-color: white;
-      border-radius: 12px;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-      padding: 1rem;
-      transition: transform 0.2s ease;
-    }
-
-    .chat-room:hover {
-      transform: scale(1.03);
-    }
-
-    .chat-room h3 {
+    .card h3 {
+      color: orange;
       margin-top: 0;
     }
 
-    .btn-crear {
-      display: inline-block;
-      margin-top: 1rem;
-      background-color: #ff8c00;
-      color: white;
-      padding: 0.5rem 1rem;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
+    .card p {
+      color: #c0c0c0;
     }
-
-    .btn-crear:hover {
-      background-color: #e67600;
-    }
-
   </style>
 </head>
 <body>
-  <header>
-    <div class="logo">blogsCRAFT</div>
-    <nav>
-      <a href="index.html">Inicio</a>
-      <a href="comunidad.html">Comunidad</a>
-      <a href="#">Descargas</a>
-    </nav>
-  </header>
+  <nav>
+    <a href="index.html">inicio</a>
+    <a href="comunidad.html">comunidad</a>
+    <a href="#">descargas</a>
+  </nav>
 
-  <main>
-    <h2>Salas de charla</h2>
-    <div class="chat-box">
-      <div class="chat-room">
-        <h3>Survival</h3>
-        <p>Discute estrategias, comparte ideas para sobrevivir y muestra tu base.</p>
-      </div>
-      <div class="chat-room">
-        <h3>Redstone</h3>
-        <p>Comparte tus mecanismos más locos y aprende de otros ingenieros de Redstone.</p>
-      </div>
-      <div class="chat-room">
-        <h3>Creativo</h3>
-        <p>Comparte tus construcciones y participa en concursos de diseño.</p>
-      </div>
-      <div class="chat-room">
-        <h3>Mods y Plugins</h3>
-        <p>Habla sobre tus favoritos, cómo instalarlos y encuentra nuevos mods interesantes.</p>
-      </div>
+  <header>blogsCRAFT</header>
+
+  <div class="articulos">
+    <div class="card" onclick="window.location.href='golem.html'">
+      <h3>El Gólem de Cobre llega a Minecraft</h3>
+      <p>La comunidad lo pidió, Mojang escuchó. Ahora organizar cofres es más fácil y con más estilo que nunca.</p>
     </div>
-
-    <button class="btn-crear">+ Crear nueva sala</button>
-  </main>
+    <div class="card" onclick="window.location.href='lava-chicken.html'">
+      <h3>Lava Chicken: el nuevo disco musical que todos quieren</h3>
+      <p>Descubre el misterio detrás del disco más extraño, caótico y divertido de la historia de Minecraft.</p>
+    </div>
+  </div>
 </body>
 </html>
